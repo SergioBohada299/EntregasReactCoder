@@ -1,0 +1,30 @@
+.App {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+/*Cart widget*/
+
+.btn-cart{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items:center; 
+  justify-content: space-between;
+}
+
+.text-warning{
+  padding: 10px;
+}
+
+/*ItemListContainer*/
+
+.sct-bienvenida{
+  padding: 50px 0px 50px 0px;
+}
