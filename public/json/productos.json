@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "idCategoria": 1,
+        "nombre":"Arena Ecológica - 2kg",
+        "marca":"EcoNekko",
+        "stock": 30,
+        "precio":5000,
+        "img":"arena.png"
+    },{
+        "id": 2,
+        "idCategoria": 1,
+        "nombre":"Arena Ecológica - 5kg",
+        "marca":"EcoNekko",
+        "stock": 20,
+        "precio":10000,
+        "img":"arena.png"
+
+    },{
+        "id": 3,
+        "idCategoria": 2,
+        "nombre":"GPS para gatos",
+        "marca":"EcoNekko",
+        "stock": 15,
+        "precio":35000,
+        "img":"arena.png"
+    }
+]
