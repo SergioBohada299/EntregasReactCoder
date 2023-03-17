@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 export const Categorias = () => {
   return (
@@ -14,14 +15,10 @@ export const Categorias = () => {
     </a>
     <ul className="dropdown-menu">
       <li>
-        <a className="dropdown-item" href="#">
-          Arena Ecologíca
-        </a>
+        <Link className="dropdown-item" to={'/category/1'}>Arena Ecologíca</Link>
       </li>
       <li>
-        <a className="dropdown-item" href="#">
-          Juguetes
-        </a>
+        <Link className="dropdown-item" to={'/category/2'}>Juguetes</Link>
       </li>
     </ul>
   </li>
