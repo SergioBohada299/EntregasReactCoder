@@ -1,19 +1,35 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
-import {consultarBD} from "../../utils/funciones.js";
+import { ItemCount } from '../ItemCount/ItemCount.jsx';
 
-export const ItemDetail = () => {
-    const [producto, setProducto] = useState([]);
+export const ItemDetail = ({prod}) => {
+const onAdd = (cantidad)=>{
+    console.log(cantidad)
+};
 
-    useEffect(() => {
-        consultarBD('./json/productos.json').then(prods =>{
-            const prod = prods.find(item => item.id === 1)
-            setProducto(prod)
-        })
-    },[])
     return (
         <div>
-            
+            <div className="row g-0">
+  <div className="col-md-4">
+    <img src={`/img/${prod.img}`} className="img-fluid rounded-start" alt="..." />
+  </div>
+  <div className="col-md-8">
+    <div className="card-body">
+      <h5 className="card-title">{prod.nombre}</h5>
+      <p className="card-text">
+        Marca: {prod.marca}
+      </p>
+      <p className="card-text">
+        Precio: {prod.precio}
+      </p>
+      <p className="card-text">
+        Stock: {prod.stock}
+      </p>
+      <ItemCount ValInicial={1} stock={prod.stock} onAdd={onAdd}/>
+      <button className="btn btn-light">Finalizar compra</button>
+    </div>
+  </div>
+</div>
+
         </div>
     );
 }

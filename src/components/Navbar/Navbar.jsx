@@ -2,14 +2,13 @@ import React from "react";
 import { Categorias } from "./Categorias/Categorias.jsx";
 import { Secciones } from "./Secciones/Secciones.jsx";
 import { Cart } from "../Cart/Cart.jsx";
+import {Link} from 'react-router-dom';
 export const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            EcoNekko
-          </a>
+          <Link className="navbar-brand" to={'/'}>EcoNekko</Link>
           <button
             className="navbar-toggler"
             type="button"

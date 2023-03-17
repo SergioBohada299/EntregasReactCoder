@@ -28,3 +28,18 @@
 .sct-bienvenida{
   padding: 50px 0px 50px 0px;
 }
+
+.prods--list{
+  width: 100%;
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.itemDetail{
+  max-width: 540px;
+  margin-top: 20px;
+}
