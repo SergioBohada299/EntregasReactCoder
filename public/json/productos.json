@@ -6,7 +6,7 @@
         "marca":"EcoNekko",
         "stock": 30,
         "precio":5000,
-        "img":"arena.png"
+        "img":"https://firebasestorage.googleapis.com/v0/b/react-44955-sergiobohada.appspot.com/o/arena.png?alt=media&token=edb4aa14-a830-4368-904c-64404aa50d88"
     },{
         "id": 2,
         "idCategoria": 1,
@@ -14,7 +14,7 @@
         "marca":"EcoNekko",
         "stock": 20,
         "precio":10000,
-        "img":"arena.png"
+        "img":"https://firebasestorage.googleapis.com/v0/b/react-44955-sergiobohada.appspot.com/o/arena.png?alt=media&token=edb4aa14-a830-4368-904c-64404aa50d88"
 
     },{
         "id": 3,
@@ -23,6 +23,6 @@
         "marca":"EcoNekko",
         "stock": 15,
         "precio":35000,
-        "img":"gps.jpg"
+        "img":"https://firebasestorage.googleapis.com/v0/b/react-44955-sergiobohada.appspot.com/o/gps.jpg?alt=media&token=a641a409-df51-4dfa-bb9f-696567790fc9"
     }
 ]

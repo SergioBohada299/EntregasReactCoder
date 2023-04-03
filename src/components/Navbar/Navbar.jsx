@@ -3,6 +3,9 @@ import { Categorias } from "./Categorias/Categorias.jsx";
 import { Secciones } from "./Secciones/Secciones.jsx";
 import { Cart } from "../Cart/Cart.jsx";
 import {Link} from 'react-router-dom';
+import { CartWidget } from '../CartWidget/CartWidget.jsx';
+
+
 export const Navbar = () => {
   return (
     <>
@@ -26,7 +29,7 @@ export const Navbar = () => {
             </ul>
           </div>
         </div>
-        <Cart item={"1"}/>
+        {<CartWidget item={"1"}/>}
       </nav>
     </>
   );

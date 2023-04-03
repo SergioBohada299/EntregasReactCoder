@@ -1,16 +1,19 @@
 import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount.jsx';
+import { Link } from 'react-router-dom';
+import { useCarritoContext } from '../../context/CarritoContext.js';
 
 export const ItemDetail = ({prod}) => {
+  const {addItem} = useCarritoContext();
 const onAdd = (cantidad)=>{
-    console.log(cantidad)
+  addItem(prod,cantidad)
 };
 
     return (
         <div>
             <div className="row g-0">
   <div className="col-md-4">
-    <img src={`/img/${prod.img}`} className="img-fluid rounded-start" alt="..." />
+    <img src={prod.img} className="img-fluid rounded-start" alt="..." />
   </div>
   <div className="col-md-8">
     <div className="card-body">
@@ -25,7 +28,7 @@ const onAdd = (cantidad)=>{
         Stock: {prod.stock}
       </p>
       <ItemCount ValInicial={1} stock={prod.stock} onAdd={onAdd}/>
-      <button className="btn btn-light">Finalizar compra</button>
+      <Link className='nav-link' to={'/cart'}><button className="btn btn-light">Finalizar compra</button></Link>
     </div>
   </div>
 </div>

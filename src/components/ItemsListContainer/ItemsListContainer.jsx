@@ -1,5 +1,5 @@
 import React from "react";
-import {consultarBD} from "../../utils/funciones.js";
+import { getProductos } from "../../utils/firebase.js";
 import { useState, useEffect } from "react";
 import { ItemList} from '../ItemList/ItemList.jsx';
 import { useParams } from "react-router-dom";
@@ -10,17 +10,19 @@ export const ItemsListContainer = () => {
   const [productos, setProductos] = useState([idCategoria]);
   useEffect(()=>{
     if(idCategoria){
-      consultarBD('../json/productos.json').then(products => {
+      getProductos().then(products => {
         const prods = products.filter(prod => prod.idCategoria === parseInt(idCategoria));
-        const items = ItemList({prods});
+        const items = <ItemList prods={prods} plantilla="Item"/>
         console.log(items);
         setProductos(items);
+        console.log("if");
       });
     }else{
-      consultarBD('./json/productos.json').then(prods => {
-        const items = ItemList({prods});
+      getProductos().then(prods => {
+        const items = <ItemList prods={prods} plantilla="Item"/>;
         console.log(items);
         setProductos(items);
+        console.log("Else");
       });
 
     }
